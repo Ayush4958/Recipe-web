@@ -94,38 +94,6 @@ app.delete('/favorites/:favoriteId', async (req, res) => {
   }
 });
 
-// Delete all favorites for a user (optional endpoint)
-app.delete('/favorites/user/:userId', async (req, res) => {
-  const userId = req.params.userId;
-
-  try {
-    const collection = db.collection('fav-part');
-    const result = await collection.deleteMany({ userId: userId });
-    
-    res.status(200).json({ 
-      message: "✅ All favorites removed successfully", 
-      deletedCount: result.deletedCount 
-    });
-  } catch (err) {
-    console.error("❌ Delete Error:", err.message);
-    res.status(500).send("Server error");
-  }
-});
-
-// Get favorite count for a user
-app.get('/favorites/:userId/count', async (req, res) => {
-  const userId = req.params.userId;
-
-  try {
-    const collection = db.collection('fav-part');
-    const count = await collection.countDocuments({ userId });
-    res.status(200).json({ count });
-  } catch (err) {
-    console.error("❌ Count Error:", err.message);
-    res.status(500).send("Server error");
-  }
-});
-
 app.listen(port, () => {
   console.log(`🚀 Server running at http://localhost:${port}`);
 });
