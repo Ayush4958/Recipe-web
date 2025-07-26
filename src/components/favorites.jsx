@@ -40,19 +40,24 @@ function Favorites() {
 
   // Delete a favorite (you'll need to add this endpoint to your backend)
   const deleteFavorite = async (favoriteId, recipeId) => {
-
+    setDeleteLoading(prev => ({ ...prev, [recipeId]: true }));
+    
     try {
       const response = await fetch(`http://localhost:3000/favorites/${favoriteId}`, {
         method: 'DELETE',
       });
 
       if (response.ok) {
+        // Remove from local state
+        setFavorites(prev => prev.filter(item => item._id !== favoriteId));
       } else {
         throw new Error('Failed to delete favorite');
       }
     } catch (err) {
       console.error("Error deleting favorite:", err.message);
       alert("Failed to remove from favorites. Please try again.");
+    } finally {
+      setDeleteLoading(prev => ({ ...prev, [recipeId]: false }));
     }
   };
 
