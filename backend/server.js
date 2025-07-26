@@ -9,12 +9,10 @@ const port = 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/food', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log('Connected to MongoDB: food'))
-.catch(err => console.error('MongoDB connection error:', err));
+mongoose.connect("mongodb://localhost:27017/food")
+  .then(() => console.log("✅ MongoDB connected successfully"))
+  .catch((err) => console.error("❌ MongoDB connection error:", err));
+
 
 const db = mongoose.connection;
 
