@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+#root {
+  margin: 0;
+  padding: 0;
+}
+html , body {
+  transition: 0.5s ease, color 0.5s ease;
+}
+
+
