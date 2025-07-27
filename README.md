@@ -1,45 +1,32 @@
-# 🍲 Full-Stack Food Recipe Finder App
+# 🥘 Recipe Finder Web App
 
-A modern recipe web application that helps users explore thousands of recipes by **cuisine, dietary needs, ingredients, and dish types**. Users can **search**, **filter**, and **save favorite recipes** after authentication. Built using **React**, **Tailwind CSS**, **Clerk Auth**, **Express.js**, and **MongoDB**.
+A modern and intelligent recipe search web app that allows users to discover delicious meals based on **cuisine**, **diet**, **nutrients**, and more. Built with a full-stack architecture — React frontend, Express backend, and MongoDB database integration.
+
+> ✅ Live Demo: https://earnest-biscochitos-b56c64.netlify.app/
+> 📁 Backend Repo (if separate): [Add Render or backend repo link]  
 
 ---
 
 ## 🚀 Features
 
-- 🔍 Search recipes by:
-  - Cuisine (Indian, Italian, Chinese, etc.)
-  - Dietary Preferences (Vegan, Vegetarian, Pescetarian, etc.)
-  - Nutritional Filters (Protein, Sugar, Carbs, etc.)
-- 🧠 Smart Form Handling with `react-hook-form`
-- ❤️ Save recipes to Favorites (only for logged-in users)
-- 🔐 Authentication with [Clerk.dev](https://clerk.dev/)
-- 📦 Backend API using **Express.js** & **MongoDB**
-- 🌙 Dark mode support
-- 📱 Fully responsive UI using **Tailwind CSS**
+- 🔍 **Smart Search** — Filter by cuisine, diet type, nutrient focus (e.g., protein, calories, iron, etc.)
+- 💾 **Favorites** — Save recipes you love and access them when logged in
+- 👤 **Authentication** — Secure login and user management using Clerk
+- 🎨 **Responsive UI** — Fully mobile-friendly design using Tailwind CSS
+- 🪄 **Confetti Effects** — Celebrate actions like adding favorites (with AI-generated effects)
+- 🌍 **Deployed** — Frontend hosted on Netlify and backend on Render
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-| Frontend | Backend | Database | Auth |
-|----------|---------|----------|------|
-| React + Vite | Node.js (Express.js) | MongoDB | Clerk.dev |
-| Tailwind CSS | REST API | Mongoose / MongoClient | |
+### Frontend
+- ⚛️ React + Vite
+- 🎨 Tailwind CSS
+- 🔐 Clerk for authentication
+- 🌍 Deployed via **Netlify**
 
----
-
-## 🗂️ Folder Structure
-
-food-recipe-app/
-├── backend
-│ ├── src/
-│ │ ├── components/
-│ │ └── pages/
-│ └── ...
-│ └── index.js
-├── .env
-└── README.md
-
-
-
-
+### Backend
+- 🧠 Node.js + Express.js
+- 💾 MongoDB Atlas (cloud DB)
+- ⚙️ Hosted on **Render**
