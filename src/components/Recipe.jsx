@@ -75,7 +75,7 @@ function Recipe() {
       image: item.image,
     };
     try {
-      const res = await fetch("http://localhost:3000/recipes", {
+      const res = await fetch("https://recipe-web-x4ys.onrender.com/recipes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

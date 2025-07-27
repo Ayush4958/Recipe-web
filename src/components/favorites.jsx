@@ -22,7 +22,7 @@ function Favorites() {
       setLoading(true);
       setError(null);
 
-      const res = await fetch(`http://localhost:3000/favorites/${user.id}`);
+      const res = await fetch(`https://recipe-web-x4ys.onrender.com/favorites/${user.id}`);
 
       if (res.ok) {
         const data = await res.json();
@@ -43,7 +43,7 @@ function Favorites() {
     setDeleteLoading(prev => ({ ...prev, [recipeId]: true }));
     
     try {
-      const response = await fetch(`http://localhost:3000/favorites/${favoriteId}`, {
+      const response = await fetch(`https://recipe-web-x4ys.onrender.com/favorites/${favoriteId}`, {
         method: 'DELETE',
       });
 
